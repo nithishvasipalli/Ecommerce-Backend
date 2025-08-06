@@ -52,4 +52,9 @@ public class ExcelRController {
 			return "App is running!";
 	}
 
+	@GetMapping("/ping")
+	public String ping() {
+			return "OK";
+	}
+
 }

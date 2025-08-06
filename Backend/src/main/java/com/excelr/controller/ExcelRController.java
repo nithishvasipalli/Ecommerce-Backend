@@ -46,4 +46,10 @@ public class ExcelRController {
 			return "Invalid Credentials";
 		}
 	}
+
+	@GetMapping("/")
+	public String healthCheck() {
+			return "App is running!";
+	}
+
 }

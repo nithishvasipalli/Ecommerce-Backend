@@ -1,0 +1,67 @@
+package com.excelr.model;
+
+import jakarta.persistence.Entity;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+
+public class Mobiles {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int pid;
+	private String pname;
+	private double pcost;
+	private int pqty;
+	private String pimage;
+	public Mobiles() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Mobiles(int pid, String pname, double pcost, int pqty, String pimage) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+		this.pcost = pcost;
+		this.pqty = pqty;
+		this.pimage = pimage;
+	}
+	@Override
+	public String toString() {
+		return "Mobiles [pid=" + pid + ", pname=" + pname + ", pcost=" + pcost + ", pqty=" + pqty + ", pimage=" + pimage
+				+ "]";
+	}
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public double getPcost() {
+		return pcost;
+	}
+	public void setPcost(double pcost) {
+		this.pcost = pcost;
+	}
+	public int getPqty() {
+		return pqty;
+	}
+	public void setPqty(int pqty) {
+		this.pqty = pqty;
+	}
+	public String getPimage() {
+		return pimage;
+	}
+	public void setPimage(String pimage) {
+		this.pimage = pimage;
+	}
+	
+}
